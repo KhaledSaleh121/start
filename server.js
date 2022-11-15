@@ -11,3 +11,8 @@ app.listen(PORT,(err)=>{
     if(err) throw err;
     console.log('listing on port ${PORT} ..');
 })
+
+var locateChrome = require('locate-chrome');
+locateChrome(function(l) {
+    console.log(l);
+  });
