@@ -8,6 +8,7 @@ const bot = async()=>{
     await page.goto('https://google.com/',{
         waitUntil:'networkidle2'
     });
+    console.log("fine");
     console.log( await page.content())
     return 'Done';
 }
