@@ -1,7 +1,8 @@
 const express = require('express');
 const bot = require('./bot');
 const app = express();
-
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(__dirname));
 app.get('/',async (req,res)=>{
     const response = await bot();
     res.send('Done');
